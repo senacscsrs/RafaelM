@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="calendario.css" />
+    <link rel="icon" href="https://images.emojiterra.com/microsoft/fluent-emoji/15.1/1024px/1f3ce_color.png" type="image/png"/>
+    <title>Fórmula 1</title>
+</head>
+<body>
+   <header class="navbar">
+        <img class="fotonavbr" src="https://sky-programmi.kleecks-cdn.com/images/cc/upload/f_webp/v1/logo/logo-f1-cbaf7" alt="logof1">
+        <a href="paginaincial.html"><b>Início</b></a>
+        <a href="calendario.html"><b>Calendário</b></a>
+        <a href="resultados.html"><b>Resultados</b></a>
+        <details class="dropdown">
+          <summary><b>Pilotos</b></summary>
+          <div class="dropdown-content">
+            <a href="verstappen.html">Max Verstappen</a>
+            <a href="leclerc.html">Charles Leclerc</a>
+            <a href="sainz.html">Carlos Sainz</a>
+            <a href="hamilton.html">Lewis Hamilton</a>
+            <a href="russell.html">George Russell</a>
+            <a href="norris.html">Lando Norris</a>
+            <a href="piastri.html">Oscar Piastri</a>
+            <a href="alonso.html">Fernando Alonso</a>
+            <a href="stroll.html">Lance Stroll</a>
+            <a href="gasly.html">Pierre Gasly</a>
+            <a href="ocon.html">Esteban Ocon</a>
+            <a href="tsunoda.html">Yuki Tsunoda</a>
+            <a href="albon.html">Alexander Albon</a>
+            <a href="hulkenberg.html">Nico Hülkenberg</a>
+            <a href="lawson.html">Liam Lawson</a>
+            <a href="bortoleto.html">Gabriel Bortoleto</a>
+            <a href="hadjar.html">Isack Hadjar</a>
+            <a href="bearman.html">Oliver Bearman</a>
+            <a href="antonelli.html">Andrea Kimi Antonelli</a>
+            <a href="colapinto.html">Franco Colapinto</a>
+          </div>
+        </details>
+
+        <details class="dropdown">
+          <summary><b>Equipes</b></summary>
+          <div class="dropdown-content">
+            <a href="redbull.html">Red Bull Racing</a>
+            <a href="ferrari.html">Ferrari</a>
+            <a href="mercedes.html">Mercedes-AMG</a>
+            <a href="mclaren.html">McLaren</a>
+            <a href="astonmartin.html">Aston Martin</a>
+            <a href="alpine.html">Alpine</a>
+            <a href="rb.html">Visa Cash App RB</a>
+            <a href="williams.html">Williams</a>
+            <a href="stake.html">Stake F1 Team</a>
+            <a href="haas.html">Haas F1 Team</a>
+          </div>
+        </details>
+    </header>
+   <section class="grid-container">
+  <div class="card">
+    <input type="checkbox" id="card1" class="toggle">
+    <label for="card1" class="card-content">
+      <div class="titulo-wrapper">
+        <img src="data:image/png;base64,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" alt="Avatar 1" class="avatar">
+        <h3 class="titulo">Rodada 1 </h3>
+      </div>
+      <img src="https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000000/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Australia_Circuit.webp" alt="australia" class="main-img">
+      <p class="nome">GP da Austrália</p>
+      <div class="info-oculta">
+        <ul>
+            <li>Circuito: Albert Park</li>
+            <li>Local: Melbourne, Austrália</li>
+            <li>Data: 14 a 16 de março</li>
+            <li>Extensão: 5.278 km</li>
+            <li>Curvas: 14</li>
+            <li>Voltas: 58</li>
+            <li>Volta mais rápida: Lando Norris - 1:15.096</li>
+        </ul>
+      </div>
+    </label>
+  </div>
+  <div class="card">
+    <input type="checkbox" id="card2" class="toggle">
+    <label for="card2" class="card-content">
+      <div class="titulo-wrapper">
+        <img src="https://static.significados.com.br/foto/china.jpg?width=1024" alt="Avatar 2" class="avatar">
+        <h3 class="titulo">Rodada 2</h3>
+      </div>
+      <img src="https://blog-formula1.com/wp-content/uploads/2025/03/image-64.png?w=1024" alt="china" class="main-img">
+      <p class="nome">GP da China</p>
+      <div class="info-oculta">
+         <ul>
+            <li>Circuito: Shanghai International Circuit</li>
+            <li>Local:  Xangai, China</li>
+            <li>Data: 21 a 23 de março</li>
+            <li>Extensão:  5.451 km</li>
+            <li>Curvas: 16</li>
+            <li>Voltas: 56</li>
+            <li>Volta mais rápida: Oscar Piastri - 1:30.641</li>
+        </ul>
+      </div>
+    </label>
+  </div>
+  <div class="card">
+    <input type="checkbox" id="card3" class="toggle">
+    <label for="card3" class="card-content">
+      <div class="titulo-wrapper">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Flag_of_Japan.svg" alt="Avatar 3" class="avatar">
+        <h3 class="titulo">Rodada 3</h3>
+      </div>
+      <img src="https://blog-formula1.com/wp-content/uploads/2025/03/image-99.png?w=1024" alt="japão" class="main-img">
+      <p class="nome">GP do Japão</p>
+      <div class="info-oculta">
+        <ul>
+            <li>Circuito: Suzuka Circuit</li>
+            <li>Local:  Suzuka, Japão</li>
+            <li>Data: 04 a 06 de abril</li>
+            <li>Extensão: 5.807 km</li>
+            <li>Curvas: 18</li>
+            <li>Voltas: 53</li>
+            <li>Volta mais rápida: Max Verstappen - 1:26.983</li>
+        </ul>
+      </div>
+    </label>
+  </div>
+   <div class="card">
+    <input type="checkbox" id="card4" class="toggle">
+    <label for="card4" class="card-content">
+      <div class="titulo-wrapper">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Flag_of_Bahrain.svg" alt="Avatar 3" class="avatar">
+        <h3 class="titulo">Rodada 4</h3>
+      </div>
+      <img src="https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000000/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Bahrain_Circuit.webp" alt="bahrain" class="main-img">
+      <p class="nome">GP do Bahrein</p>
+      <div class="info-oculta">
+        <ul>
+            <li>Circuito: Bahrain International Circuit</li>
+            <li>Local: Sakhir, Bahrein</li>
+            <li>Data: 11 a 13 de abril</li>
+            <li>Extensão: 5.412 km</li>
+            <li>Curvas: 15</li>
+            <li>Voltas: 57</li>
+            <li>Volta mais rápida: Lewis Hamilton - 1:27.264</li>
+        </ul>
+      </div>
+    </label>
+  </div>
+  <div class="card">
+    <input type="checkbox" id="card5" class="toggle">
+    <label for="card5" class="card-content">
+      <div class="titulo-wrapper">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Flag_of_Saudi_Arabia.svg/1200px-Flag_of_Saudi_Arabia.svg.png" alt="Avatar 3" class="avatar">
+        <h3 class="titulo">Rodada 5</h3>
+      </div>
+      <img src="https://blog-formula1.com/wp-content/uploads/2025/04/image-53.png?w=1024" alt="arabia" class="main-img">
+      <p class="nome">GP da Arábia Saudita</p>
+      <div class="info-oculta">
+         <ul>
+            <li>Circuito: Jeddah Street Circuit</li>
+            <li>Local: Jeddah, Arábia Saudita</li>
+            <li>Data: 18 a 20 de abril</li>
+            <li>Extensão: 6.174 km</li>
+            <li>Curvas: 27</li>
+            <li>Voltas: 60</li>
+            <li>Volta mais rápida: Max Verstappen - 1:27.294 </li>
+        </ul>
+      </div>
+    </label>
+  </div>
+  <div class="card">
+    <input type="checkbox" id="card6" class="toggle">
+    <label for="card6" class="card-content">
+      <div class="titulo-wrapper">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Flag_of_the_United_States_%28Web_Colors%29.svg/250px-Flag_of_the_United_States_%28Web_Colors%29.svg.png" alt="Avatar 3" class="avatar">
+        <h3 class="titulo">Rodada 6</h3>
+      </div>
+      <img src="https://www.autohebdo.fr/app/uploads/2025/04/Miami_Circuit.png" alt="miami" class="main-img">
+      <p class="nome">GP de Miami</p>
+      <div class="info-oculta">
+         <ul>
+            <li>Circuito: Miami International Autodrome</li>
+            <li>Local: Miami, Estados Unidos</li>
+            <li>Data: 02 a 04 de maio</li>
+            <li>Extensão: 5.412 km</li>
+            <li>Curvas: 19</li>
+            <li>Voltas: 57</li>
+            <li>Volta mais rápida: Max Verstappen - 1:26.204 </li>
+        </ul>
+      </div>
+    </label>
+  </div>
+   <div class="card">
+    <input type="checkbox" id="card7" class="toggle">
+    <label for="card7" class="card-content">
+      <div class="titulo-wrapper">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/03/Flag_of_Italy.svg" alt="Avatar 3" class="avatar">
+        <h3 class="titulo">Rodada 7</h3>
+      </div>
+      <img src="https://blog-formula1.com/wp-content/uploads/2025/05/image-5.png?w=1024" alt="imola" class="main-img">
+      <p class="nome">GP da Emilia Romagna </p>
+      <div class="info-oculta">
+        <ul>
+            <li>Circuito: Autódromo Enzo e Dino Ferrari (Imola)</li>
+            <li>Local: Imola, Itália</li>
+            <li>Data: 16 a 18 de maio</li>
+            <li>Extensão: 4.909 km</li>
+            <li>Curvas: 19</li>
+            <li>Voltas: 63</li>
+            <li>Volta mais rápida: Valtteri Bottas - 1:13.609 </li>
+        </ul>
+      </div>
+    </label>
+  </div>
+   <div class="card">
+    <input type="checkbox" id="card8" class="toggle">
+    <label for="card8" class="card-content">
+      <div class="titulo-wrapper">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Flag_of_Monaco.svg/800px-Flag_of_Monaco.svg.png" alt="Avatar 3" class="avatar">
+        <h3 class="titulo">Rodada 8</h3>
+      </div>
+      <img src="https://www.tomadadetempo.com.br/wp-content/uploads/2025/05/Monaco_Circuit.jpg" alt="monaco" class="main-img">
+      <p class="nome">GP de Mônaco </p>
+      <div class="info-oculta">
+         <ul>
+            <li>Circuito: Circuit de Monaco</li>
+            <li>Local: Monte Carlo, Mônaco</li>
+            <li>Data: 23 a 25 de maio</li>
+            <li>Extensão: 3.337 km</li>
+            <li>Curvas: 19</li>
+            <li>Voltas: 78</li>
+            <li>Volta mais rápida: Lando Norris - 1.09.954 </li>
+        </ul>
+      </div>
+    </label>
+  </div>
+   <div class="card">
+    <input type="checkbox" id="card9" class="toggle">
+    <label for="card9" class="card-content">
+      <div class="titulo-wrapper">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Spain.svg/250px-Flag_of_Spain.svg.png" alt="Avatar 3" class="avatar">
+        <h3 class="titulo">Rodada 9</h3>
+      </div>
+      <img src="https://blog-formula1.com/wp-content/uploads/2025/05/image-30.png?w=1024" alt="espanha" class="main-img">
+      <p class="nome">GP da Espanha </p>
+      <div class="info-oculta">
+        <ul>
+            <li>Circuito: Circuit de Barcelona-Catalunya</li>
+            <li>Local: Barcelona, Espanha</li>
+            <li>Data: 30 de maio a 01 de junho</li>
+            <li>Extensão: 4.655 km</li>
+            <li>Curvas: 14</li>
+            <li>Voltas: 66</li>
+            <li>Volta mais rápida: Lando Norris - 1:11.383 </li>
+        </ul>
+      </div>
+    </label>
+  </div>
+  <div class="card">
+    <input type="checkbox" id="card10" class="toggle">
+    <label for="card10" class="card-content">
+      <div class="titulo-wrapper">
+        <img src="https://cdn11.bigcommerce.com/s-3wskl27okf/images/stencil/1280x1280/products/2609/4991/Flag_of_Canada__77294.1743250621.gif?c=1" alt="Avatar 3" class="avatar">
+        <h3 class="titulo">Rodada 10</h3>
+      </div>
+      <img src="https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000000/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Canada_Circuit.webp" alt="canada" class="main-img">
+      <p class="nome">GP do Canadá </p>
+      <div class="info-oculta">
+        <ul>
+            <li>Circuito: Circuit Gilles Villeneuve</li>
+            <li>Local: Montreal, Canadá</li>
+            <li>Data: 13 a 15 de junho</li>
+            <li>Extensão: 4.361 km</li>
+            <li>Curvas: 14   </li>
+            <li>Voltas: 70</li>
+            <li>Volta mais rápida: Sebastian Vettel - 1:10.764 </li>
+        </ul>
+      </div>
+    </label>
+  </div>
+  <div class="card">
+    <input type="checkbox" id="card11" class="toggle">
+    <label for="card11" class="card-content">
+      <div class="titulo-wrapper">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Flag_of_Austria.svg/250px-Flag_of_Austria.svg.png" alt="Avatar 3" class="avatar">
+        <h3 class="titulo">Rodada 11</h3>
+      </div>
+      <img src="https://media.formula1.com/image/upload/f_auto,c_limit,q_auto,w_1320/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Austria_Circuit" alt="austria" class="main-img">
+      <p class="nome">GP da Áustria </p>
+      <div class="info-oculta">
+        <ul>
+            <li>Circuito: Red Bull Ring</li>
+            <li>Local: Spielberg, Áustria</li>
+            <li>Data: 13 a 15 de junho</li>
+            <li>Extensão: 4.326 km </li>
+            <li>Curvas: 10</li>
+            <li>Voltas: 71</li>
+            <li>Volta mais rápida: Valtteri Bottas - 1:02.939 </li>
+        </ul>
+      </div>
+    </label>
+  </div>
+  <div class="card">
+    <input type="checkbox" id="card12" class="toggle">
+    <label for="card12" class="card-content">
+      <div class="titulo-wrapper">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg/1200px-Flag_of_the_United_Kingdom_%281-2%29.svg.png" alt="Avatar 3" class="avatar">
+        <h3 class="titulo">Rodada 12</h3>
+      </div>
+      <img src="https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000000/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Great_Britain_Circuit.webp" alt="reinounido" class="main-img">
+      <p class="nome">GP do Reino Unido </p>
+      <div class="info-oculta">
+        <ul>
+            <li>Circuito: Silverstone Circuit</li>
+            <li>Local: Silverstone, Reino Unido</li>
+            <li>Data: 04 a 06 de julho</li>
+            <li>Extensão: 5.891 km</li>
+            <li>Curvas: 18</li>
+            <li>Voltas: 52</li>
+            <li>Volta mais rápida: Lewis Hamilton - 1:24.303 </li>
+        </ul>
+      </div>
+    </label>
+  </div>
+  <div class="card">
+    <input type="checkbox" id="card13" class="toggle">
+    <label for="card13" class="card-content">
+      <div class="titulo-wrapper">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Flag_of_Belgium.svg/250px-Flag_of_Belgium.svg.png" alt="Avatar 3" class="avatar">
+        <h3 class="titulo">Rodada 13</h3>
+      </div>
+      <img src="https://sctd.com.br/wp-content/uploads/2024/07/Belgium_Circuit.png" alt="belgica" class="main-img">
+      <p class="nome">GP da Bélgica </p>
+      <div class="info-oculta">
+        <ul>
+            <li>Circuito: Spa-Francorchamps</li>
+            <li>Local: Spa, Bélgica</li>
+            <li>Data: 25 a 27 de julho</li>
+            <li>Extensão: 7.004 km</li>
+            <li>Curvas: 20</li>
+            <li>Voltas: 44</li>
+            <li>Volta mais rápida: Lewis Hamilton - 1:41.252 </li>
+        </ul>
+      </div>
+    </label>
+  </div>
+  <div class="card">
+    <input type="checkbox" id="card14" class="toggle">
+    <label for="card14" class="card-content">
+      <div class="titulo-wrapper">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Flag_of_Hungary.svg/250px-Flag_of_Hungary.svg.png" alt="Avatar 3" class="avatar">
+        <h3 class="titulo">Rodada 14</h3>
+      </div>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXoJgPWrAtDvjM6eC1RUWR7QwpcgT_t6PbHw&s" alt="hungria" class="main-img">
+      <p class="nome">GP da Hungria </p>
+      <div class="info-oculta">
+        <ul>
+            <li>Circuito: Hungaroring</li>
+            <li>Local: Mogyorod, Budapeste, Hungria</li>
+            <li>Data: 01 a 03 de agosto</li>
+            <li>Extensão: 4.381 km</li>
+            <li>Curvas: 14</li>
+            <li>Voltas: 70</li>
+            <li>Volta mais rápida: Lewis Hamilton - 1:13.447 </li>
+        </ul>
+      </div>
+    </label>
+  </div>
+  <div class="card">
+    <input type="checkbox" id="card15" class="toggle">
+    <label for="card15" class="card-content">
+      <div class="titulo-wrapper">
+        <img src="https://s5.static.brasilescola.uol.com.br/be/2022/11/bandeira-paises-baixos-2.jpg" alt="Avatar 3" class="avatar">
+        <h3 class="titulo">Rodada 15</h3>
+      </div>
+      <img src="https://www.autohebdo.fr/app/uploads/2024/08/Netherlands_Circuit.png" alt="holanda" class="main-img">
+      <p class="nome">GP da Holanda </p>
+      <div class="info-oculta">
+         <ul>
+            <li>Circuito: Circuit Zandvoort</li>
+            <li>Local: 	Zandvoort, Holanda</li>
+            <li>Data: 29 a 31 de agosto</li>
+            <li>Extensão: 4.252 km</li>
+            <li>Curvas: 14</li>
+            <li>Voltas: 72</li>
+            <li>Volta mais rápida: Max Verstappen - 1:08.885 </li>
+        </ul>
+      </div>
+    </label>
+  </div>
+  <div class="card">
+    <input type="checkbox" id="card16" class="toggle">
+    <label for="card16" class="card-content">
+      <div class="titulo-wrapper">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Flag_of_Italy.svg/330px-Flag_of_Italy.svg.png" alt="Avatar 3" class="avatar">
+        <h3 class="titulo">Rodada 16</h3>
+      </div>
+      <img src="https://media.formula1.com/image/upload/f_auto,c_limit,q_auto,w_1320/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Italy_Circuit" alt="italia" class="main-img">
+      <p class="nome">GP da Itália </p>
+      <div class="info-oculta">
+         <ul>
+            <li>Circuito: Autodromo Nazionale di Monza</li>
+            <li>Local: 	Monza, Itália</li>
+            <li>Data: 05 a 07 de setembro</li>
+            <li>Extensão: 5.793 km</li>
+            <li>Curvas: 11</li>
+            <li>Voltas: 53</li>
+            <li>Volta mais rápida: Lewis Hamilton - 1:18.887 </li>
+        </ul>
+      </div>
+    </label>
+  </div>
+  <div class="card">
+    <input type="checkbox" id="card17" class="toggle">
+    <label for="card17" class="card-content">
+      <div class="titulo-wrapper">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/dd/Flag_of_Azerbaijan.svg" alt="Avatar 3" class="avatar">
+        <h3 class="titulo">Rodada 17</h3>
+      </div>
+      <img src="https://primexp.com.br/wp-content/uploads/2023/11/Baku_Circuit.webp" alt="azerbaijão" class="main-img">
+      <p class="nome">GP do Azerbaijão </p>
+      <div class="info-oculta">
+         <ul>
+            <li>Circuito:  Baku City Circuit</li>
+            <li>Local: 	Baku, Azerbaijão</li>
+            <li>Data: 21 a 23 de setembro</li>
+            <li>Extensão: 6,003 km</li>
+            <li>Curvas: 20</li>
+            <li>Voltas: 51</li>
+            <li>Volta mais rápida: Charles Leclerc - 1:40.203 </li>
+        </ul>
+      </div>
+    </label>
+  </div>
+  <div class="card">
+    <input type="checkbox" id="card18" class="toggle">
+    <label for="card18" class="card-content">
+      <div class="titulo-wrapper">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Flag_of_Singapore.svg/250px-Flag_of_Singapore.svg.png" alt="Avatar 3" class="avatar">
+        <h3 class="titulo">Rodada 18</h3>
+      </div>
+      <img src="https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000000/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Singapore_Circuit.webp" alt="singapura" class="main-img">
+      <p class="nome">GP de Singapura </p>
+      <div class="info-oculta">
+         <ul>
+            <li>Circuito:  Marina Bay Street Circuit</li>
+            <li>Local: Marina Bay, Singapura</li>
+            <li>Data: 03 a 05 de outubro</li>
+            <li>Extensão: 4.940 km</li>
+            <li>Curvas: 19</li>
+            <li>Voltas: 62</li>
+            <li>Volta mais rápida: Lando Norris - 1:29.525 </li>
+        </ul>
+      </div>
+    </label>
+  </div>
+  <div class="card">
+    <input type="checkbox" id="card19" class="toggle">
+    <label for="card19" class="card-content">
+      <div class="titulo-wrapper">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Flag_of_the_United_States_%28Web_Colors%29.svg/250px-Flag_of_the_United_States_%28Web_Colors%29.svg.png" alt="Avatar 3" class="avatar">
+        <h3 class="titulo">Rodada 19</h3>
+      </div>
+      <img src="https://retornar.com.br/wp-content/uploads/2022/10/image.png" alt="eua" class="main-img">
+      <p class="nome">GP dos Estados Unidos </p>
+      <div class="info-oculta">
+        <ul>
+            <li>Circuito:  Circuit of the Americas (COTA)</li>
+            <li>Local: Austin, Estados Unidos</li>
+            <li>Data: 17 a 19 de outubro</li>
+            <li>Extensão: 5.513 km</li>
+            <li>Curvas: 20</li>
+            <li>Voltas: 56</li>
+            <li>Volta mais rápida: Valtteri Bottas - 1:32.029 </li>
+        </ul>
+      </div>
+    </label>
+  </div>
+  <div class="card">
+    <input type="checkbox" id="card20" class="toggle">
+    <label for="card20" class="card-content">
+      <div class="titulo-wrapper">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/Flag_of_Mexico.svg" alt="Avatar 3" class="avatar">
+        <h3 class="titulo">Rodada 20</h3>
+      </div>
+      <img src="https://media.formula1.com/image/upload/f_auto,c_limit,q_auto,w_1320/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Mexico_Circuit" alt="mexico" class="main-img">
+      <p class="nome">GP do México </p>
+      <div class="info-oculta">
+         <ul>
+            <li>Circuito:  Autódromo Hermanos Rodríguez</li>
+            <li>Local: Cidade do México, México</li>
+            <li>Data: 24 a 26 de outubro</li>
+            <li>Extensão: 4.304 km</li>
+            <li>Curvas: 17</li>
+            <li>Voltas: 71</li>
+            <li>Volta mais rápida: Daniel Ricciardo - 1:14.759 </li>
+        </ul>
+      </div>
+    </label>
+  </div>
+  <div class="card">
+    <input type="checkbox" id="card21" class="toggle">
+    <label for="card21" class="card-content">
+      <div class="titulo-wrapper">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/2560px-Flag_of_Brazil.svg.png" alt="Avatar 3" class="avatar">
+        <h3 class="titulo">Rodada 21</h3>
+      </div>
+      <img src="https://alpha-assets.tadevel-cdn.com/67243256cd92e0b9c57c532d/720.webp" alt="brasil" class="main-img">
+      <p class="nome">GP do Brasil </p>
+      <div class="info-oculta">
+        <ul>
+            <li>Circuito:   Interlagos (Autódromo José Carlos Pace)</li>
+            <li>Local: São Paulo, Brasil</li>
+            <li>Data: 07 a 09 de novembro</li>
+            <li>Extensão: 4.309 km</li>
+            <li>Curvas: 15</li>
+            <li>Voltas: 71</li>
+            <li>Volta mais rápida: Lewis Hamilton - 1:07.281 </li>
+        </ul>
+      </div>
+    </label>
+  </div>
+  <div class="card">
+    <input type="checkbox" id="card22" class="toggle">
+    <label for="card22" class="card-content">
+      <div class="titulo-wrapper">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Flag_of_the_United_States_%28Web_Colors%29.svg/250px-Flag_of_the_United_States_%28Web_Colors%29.svg.png" alt="Avatar 3" class="avatar">
+        <h3 class="titulo">Rodada 22</h3>
+      </div>
+      <img src="https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000000/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Las_Vegas_Circuit.webp" alt="lasvegas" class="main-img">
+      <p class="nome">GP de Las Vegas </p>
+      <div class="info-oculta">
+         <ul>
+            <li>Circuito:   Las Vegas Street Circuit</li>
+            <li>Local: Las Vegas, Estados Unidos</li>
+            <li>Data: 20 a 22 de novembro</li>
+            <li>Extensão: 	6.201 km</li>
+            <li>Curvas: 17</li>
+            <li>Voltas: 50</li>
+            <li>Volta mais rápida: George Russell - 1:32.312 </li>
+        </ul>
+      </div>
+    </label>
+  </div>
+  <div class="card">
+    <input type="checkbox" id="card23" class="toggle">
+    <label for="card23" class="card-content">
+      <div class="titulo-wrapper">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Flag_of_Qatar.svg/250px-Flag_of_Qatar.svg.png" alt="Avatar 3" class="avatar">
+        <h3 class="titulo">Rodada 23</h3>
+      </div>
+      <img src="https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000000/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Qatar_Circuit.webp" alt="qatar" class="main-img">
+      <p class="nome">GP do Qatar </p>
+      <div class="info-oculta">
+        <ul>
+            <li>Circuito:   Lusail International Circuit</li>
+            <li>Local: Lusail, Catar</li>
+            <li>Data: 28 a 30 de novembro</li>
+            <li>Extensão: 	5.380 km</li>
+            <li>Curvas: 16</li>
+            <li>Voltas: 57</li>
+            <li>Volta mais rápida: Max Verstappen - 1:20.520 </li>
+        </ul>
+      </div>
+    </label>
+  </div>
+  <div class="card">
+    <input type="checkbox" id="card24" class="toggle">
+    <label for="card24" class="card-content">
+      <div class="titulo-wrapper">
+        <img src="https://media.istockphoto.com/id/864485064/pt/vetorial/united-arab-emirates-flag.jpg?s=612x612&w=0&k=20&c=0RaBo0cvdCOmhvhPFYyPxbM1Txbo-VaAzDBAeMJpKSk=" alt="Avatar 3" class="avatar">
+        <h3 class="titulo">Rodada 24</h3>
+      </div>
+      <img src="https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000000/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Abu_Dhabi_Circuit.webp" alt="abudhabi" class="main-img">
+      <p class="nome">GP de Abu Dhabi </p>
+      <div class="info-oculta">
+         <ul>
+            <li>Circuito: Yas Marina Circuit</li>
+            <li>Local: Yas Island, Emirados Árabes Unidos</li>
+            <li>Data: 05 a 07 de dezembro</li>
+            <li>Extensão: 	5.281 km</li>
+            <li>Curvas: 16</li>
+            <li>Voltas: 58</li>
+            <li>Volta mais rápida: Max Verstappen - 1:22.109 </li>
+        </ul>
+      </div>
+    </label>
+  </div>
+    </section>
+</body>
+</html>
