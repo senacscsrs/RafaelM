@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VesteSul</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+  <header>
+   <nav>
+  <img id="logo" src="foto/logo.png" alt="Logo VesteSul">
+
+  <form class="form-busca" action="#" method="GET">
+    <input type="text" placeholder="Buscar..." name="q" />
+    <button type="submit" class="btn-busca">
+      <img src="https://cdn-icons-png.flaticon.com/512/622/622669.png" alt="Buscar" />
+    </button>
+  </form>
+  <div class="login-cadastro">
+    <a class="login" href="login.html">Login</a>
+    <p class="ou">ou</p>
+    <a class="cadastros" href="cadastro.html">Cadastre-se</a>
+  </div>
+</nav>
+    <div class="menu-links">
+      <a class="links" href="produtos.html">Ofertas</a>
+      <a class="links" href="produtos.html">Novidades</a>
+      <a class="links" href="produtos.html">Masculino</a>
+      <a class="links" href="produtos.html">Feminino</a>
+    </div>
+     <input type="checkbox" id="menu-toggle" />
+  <label for="menu-toggle" class="menu-icon">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </label>
+  </header>
+  <div class="login-container">
+    <h2>Faça seu Login</h2>
+    <form>
+      <label for="email"><b>Email</b></label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="senha"><b>Senha</b></label>
+      <div class="senha-container">
+        <input type="password" id="senha" name="senha" required>
+        <span class="toggle-visibility">&#128065;</span>
+      </div>
+      <div class="esqueceu">
+        <a href="#">Esqueceu a senha?</a>
+      </div>
+      <div class="social-login">
+        <button type="button" class="google-btn"></button>
+        <button type="button" class="facebook-btn"></button>
+      </div>
+      <button type="submit" class="entrar-btn">ENTRAR</button>
+    </form>
+    <div class="cadastro">
+      Ainda não tem um cadastro? <a href="#">Crie sua conta</a>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,193 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #043eb3;
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-top: 20px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  background-color: #043eb3;
+}
+ #logo {
+  max-height: 130px;
+  width: auto;
+}
+.form-busca {
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+  margin: 0 20px;
+}
+.form-busca input[type="text"] {
+  width: 100%;
+  padding: 10px 40px 10px 15px;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+}
+
+.btn-busca {
+  position: absolute;
+  right: -25px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.btn-busca img {
+  width: 20px;
+  height: 20px;
+}
+
+.login-cadastro {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+}
+
+
+.login, .cadastros, .ou {
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+}
+.menu-links {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.links {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  font-size: 18px;
+}
+
+.links:hover {
+  text-decoration: underline;
+}
+
+.login-container {
+  background: #d3d3d3;
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 30px 40px;
+  border-radius: 35px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 30px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+label {
+  text-align: left;
+  margin: 10px 0 5px 0;
+  font-size: 1.2em;
+}
+
+input[type="email"],
+input[type="password"] {
+  padding: 10px;
+  font-size: 1em;
+  border: 2px solid #000;
+  border-radius: 2px;
+  margin-bottom: 15px;
+}
+
+.senha-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.senha-container input {
+  flex: 1;
+}
+
+.toggle-visibility {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  font-size: 1.3em;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.esqueceu {
+  text-align: right;
+  margin-bottom: 15px;
+  font-size: 1em;
+  color: #fff;
+}
+
+.social-login {
+  display: flex;
+  gap: 15px;
+  justify-content: left;
+  margin-bottom: 25px;
+}
+
+.google-btn, .facebook-btn {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.google-btn {
+  background-color: #fff;
+  background-image: url('https://t.ctcdn.com.br/lvns56iaSMyHvyTur4JeYS_NYeY=/i606944.png');
+  border: 1.5px solid #888;
+}
+
+.facebook-btn {
+  background-color: #fff;
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiXN9xSEe8unzPBEQOeAKXd9Q55efGHGB9BA&s');
+  border: 1.5px solid #888;
+}
+
+.entrar-btn {
+  background: #0033cc;
+  color: #fff;
+  font-size: 1.3em;
+  padding: 10px 0;
+  margin: 20px 0 10px 0;
+  border: 2px solid #000;
+  border-radius: 2px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.cadastro {
+  margin-top: 10px;
+  font-size: 1em;
+}
