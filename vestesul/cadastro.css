@@ -1,0 +1,125 @@
+
+.container {
+    max-width: 480px;
+    margin: 10px auto;
+    background: #e0e0e0;
+    border-radius: 24px;
+    padding: 28px 24px 30px 24px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .06);
+}
+
+.container h2 {
+    text-align: center;
+    font-size: 1.6em;
+    margin-bottom: 22px;
+    font-weight: bold;
+}
+
+label {
+    font-weight: bold;
+    font-size: 1em;
+    display: flex;
+    margin-bottom: 6px;
+}
+
+.input-field {
+    width: 100%;
+    padding: 8px;
+    font-size: 1em;
+    border: 2px solid #000;
+    border-radius: 15px;
+    margin-bottom: 11px;
+    background: #fff;
+    box-sizing: border-box;
+}
+
+.input-row {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.input-row input {
+    font-size: 1em;
+    border: 2px solid #000;
+    border-radius: 15px;
+    padding: 8px;
+    background: #fff;
+}
+
+.cpf-input {
+    width: 85%;
+}
+
+.dob-input {
+    width: 108%;
+}
+
+.icon-row {
+    margin-top: 4px;
+    margin-bottom: 18px;
+}
+
+.icon-row img {
+    width: 32px;
+    margin-right: 10px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.cadastro-btn {
+    background: #0033cc;
+    color: #fff;
+    font-size: 1.3em;
+    padding: 10px 0;
+    border: 2px solid #000;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 300px;
+    margin: 0 auto;
+    display: block;
+}
+.senha-field {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.social-login {
+    display: flex;
+    gap: 15px;
+    justify-content: left;
+    margin-bottom: 25px;
+}
+.toggle-visibility {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  font-size: 1.3em;
+  top: 35%;
+  transform: translateY(-50%);
+}
+.google-btn,
+.facebook-btn {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+.google-btn {
+    background-color: #fff;
+    background-image: url('https://t.ctcdn.com.br/lvns56iaSMyHvyTur4JeYS_NYeY=/i606944.png');
+    border: 1.5px solid #888;
+}
+
+.facebook-btn {
+    background-color: #fff;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiXN9xSEe8unzPBEQOeAKXd9Q55efGHGB9BA&s');
+    border: 1.5px solid #888;
+}

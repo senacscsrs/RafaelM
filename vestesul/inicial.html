@@ -1,45 +1,94 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VesteSul</title>
+  <link rel="stylesheet" href="inicial.css">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
   <header>
-   <nav>
-  <img id="logo" src="foto/logo.png" alt="Logo VesteSul">
+    <nav class="navbar">
+      <!-- Logo -->
+      <button type="button" onclick="location.href='inicial.html';" class="btn-imagem">
+        <img src="foto/logo.png" alt="logo da loja" />
+      </button>
+      <!-- Espaço para o topo -->
+      <div class="nav-content">
+        <!-- Barra de busca -->
+        <form class="form-busca" action="#" method="GET">
+          <input type="text" placeholder="Buscar..." name="q" />
+          <button type="submit" class="btn-busca">
+            <img src="https://cdn-icons-png.flaticon.com/512/622/622669.png" alt="Buscar" />
+          </button>
+        </form>
+        <!-- Links do menu principal -->
+        <ul class="menu-principal">
+          <li><a class="linksp" href="produtos.html">Ofertas</a></li>
+          <li><a class="linksp" href="produtos.html">Novidades</a></li>
+          <li><a class="linksp" href="produtos.html">Masculino</a></li>
+          <li><a class="linksp" href="produtos.html">Feminino</a></li>
+        </ul>
+      </div>
+      <!-- Login/Cadastro -->
+      <div class="login-cadastro">
+        <a class="login" href="login.html">Login</a>
+        <p class="ou">ou</p>
+        <a class="cadastros" href="cadastro.html">Cadastre-se</a>
+      </div>
+      <div class="menuh">
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="menu-icon" aria-label="Abrir menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </label>
 
-  <form class="form-busca" action="#" method="GET">
-    <input type="text" placeholder="Buscar..." name="q" />
-    <button type="submit" class="btn-busca">
-      <img src="https://cdn-icons-png.flaticon.com/512/622/622669.png" alt="Buscar" />
-    </button>
-  </form>
-  <div class="login-cadastro">
-    <a class="login" href="login.html">Login</a>
-    <p class="ou">ou</p>
-    <a class="cadastros" href="cadastro.html">Cadastre-se</a>
-  </div>
-</nav>
-    <div class="menu-links">
-      <a class="links" href="produtos.html">Ofertas</a>
-      <a class="links" href="produtos.html">Novidades</a>
-      <a class="links" href="produtos.html">Masculino</a>
-      <a class="links" href="produtos.html">Feminino</a>
-    </div>
-     <input type="checkbox" id="menu-toggle" />
-  <label for="menu-toggle" class="menu-icon">
-    <span class="bar"></span>
-    <span class="bar"></span>
-    <span class="bar"></span>
-  </label>
+        <ul class="menu-hamburguer">
+          <li><a href="carrinho.html">Carrinho</a></li>
+          <li><a href="meuspedidos.html">Meus Pedidos</a></li>
+
+        </ul>
+      </div>
+    </nav>
   </header>
-  <main>
-    <h1>PROMOÇÃO DA NOVA COLEÇÃO</h1>
-  </main>
+    <div class="banner-container">
+    <div class="banner-title">PROMOÇÃO DA NOVA COLEÇÃO</div>
+    <div class="carousel">
+      <div class="carousel-track" id="carouselTrack">
+        <img src="foto/banner.png" alt="Coleção 1" draggable="false" />
+        <img src="foto/banner.png" alt="Coleção 2" draggable="false" />
+        <img src="foto/banner.png" alt="Coleção 3" draggable="false" />
+      </div>
+    </div>
+    <div class="banner-subtitle">CONHEÇA SOBRE A NOVA COLEÇÃO</div>
+  </div>
+
+  <script>
+    const track = document.getElementById('carouselTrack');
+    const slidesCount = track.children.length;
+    let currentIndex = 0;
+
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % slidesCount;
+      const offset = -currentIndex * track.clientWidth / slidesCount;
+      track.style.transform = `translateX(${offset}px)`;
+    }, 2800);
+  </script>
+  <footer>
+    <div class="footer-container">
+      <p>&copy; 2025 VesteSul. Todos os direitos reservados.</p>
+      <div class="footer-links">
+        <a class="afooter" href="suporte.html">Suporte</a>
+        <a class="afooter" href="institucional.html">Institucional</a>
+      </div>
+    </div>
+  </footer>
 
 </body>
+
 </html>

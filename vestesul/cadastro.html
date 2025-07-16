@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VesteSul</title>
-  <link rel="stylesheet" href="suporte.css">
+  <title>Crie sua conta</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="cadastro.css">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-   <header>
+  <header>
     <nav class="navbar">
       <!-- Logo -->
       <button type="button" onclick="location.href='inicial.html';" class="btn-imagem">
@@ -56,27 +56,42 @@
       </div>
     </nav>
   </header>
-  <main>
-     <div class="container">
-    <h2>Suporte</h2>
-    <form>
-      <label id="la"for="email"><b>Email</b></label>
-      <input type="email" id="email" name="email">
 
-      <label id="la"for="senha"><b>Senha</b></label>
-      <div class="senha-container">
-        <input type="password" id="senha" name="senha">
-        <span class="eye">&#128065;</span>
+  <div class="container">
+    <h2>Crie sua conta</h2>
+    <form>
+      <label for="nome">Nome</label>
+      <input class="input-field" type="text" id="nome" name="nome" />
+
+      <label for="email">Email</label>
+      <input class="input-field" type="email" id="email" name="email" />
+
+      <label for="senha">Senha</label>
+      <div class="senha-field">
+        <input class="input-field" type="password" id="senha" name="senha" />
+
+        <span class="toggle-visibility">&#128065;</span>
       </div>
 
-      <label id="la"for="mensagem"><b>Mensagem</b></label>
-      <textarea id="mensagem" name="mensagem" rows="4"></textarea>
+      <div class="input-row">
+        <div>
+          <label for="cpf">CPF</label>
+          <input class="cpf-input" type="text" id="cpf" name="cpf" />
+        </div>
+        <div>
+          <label for="dob">Data de nascimento</label>
+          <input class="dob-input" type="text" id="dob" name="dob" />
+        </div>
+      </div>
 
-      <button class="btn-enviar"type="submit">ENVIAR</button>
+      <div class="social-login">
+        <button type="button" class="google-btn"></button>
+        <button type="button" class="facebook-btn"></button>
+      </div>
+      <button type="submit" class="cadastro-btn">CADASTRAR</button>
     </form>
   </div>
-  </main>
-  <footer >
+   <footer >
   <div class="footer-container">
       <p>&copy; 2025 VesteSul. Todos os direitos reservados.</p>
     <div class="footer-links">
@@ -85,7 +100,6 @@
     </div>
     </div>
 </footer>
-
 </body>
 
 </html>
