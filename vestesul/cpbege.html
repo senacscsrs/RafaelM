@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VesteSul</title>
-  <link rel="stylesheet" href="inicial.css">
+  <link rel="stylesheet" href="produto.css">
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -13,20 +13,16 @@
 
   <header>
     <nav class="navbar">
-
       <button type="button" onclick="location.href='inicial.html';" class="btn-imagem">
         <img src="foto/logo.png" alt="logo da loja" />
       </button>
-
       <div class="nav-content">
-
         <form class="form-busca" action="#" method="GET">
           <input type="text" placeholder="Buscar..." name="q" />
           <button type="submit" class="btn-busca">
             <img src="https://cdn-icons-png.flaticon.com/512/622/622669.png" alt="Buscar" />
           </button>
         </form>
-
         <ul class="menu-principal">
           <li><a class="linksp" href="produtos.html">Ofertas</a></li>
           <li><a class="linksp" href="produtos.html">Novidades</a></li>
@@ -34,7 +30,6 @@
           <li><a class="linksp" href="produtos.html">Feminino</a></li>
         </ul>
       </div>
-
       <div class="login-cadastro">
         <a class="login" href="login.html">Login</a>
         <p class="ou">ou</p>
@@ -56,29 +51,41 @@
       </div>
     </nav>
   </header>
-  <div class="banner-container">
-    <div class="banner-title">PROMOÇÃO DA NOVA COLEÇÃO</div>
-    <div class="carousel">
-      <div class="carousel-track" id="carouselTrack">
-        <img src="foto/banner.png" alt="Coleção 1" draggable="false" />
-        <img src="foto/banner.png" alt="Coleção 2" draggable="false" />
-        <img src="foto/banner.png" alt="Coleção 3" draggable="false" />
+  <main>
+  <div class="produto-container">
+    <div class="miniaturas">
+      <img src="https://images.tcdn.com.br/img/img_prod/947450/180_camisa_polo_masculina_new_essencial_2mt_bege_duna_1214_1_956356a4606fe9c69eb2eddc93d7a825.jpg" class="miniaturas-img" alt="Miniatura 1">
+      <img src="https://images.tcdn.com.br/img/img_prod/947450/180_camisa_polo_masculina_new_essencial_2mt_bege_duna_1214_1_956356a4606fe9c69eb2eddc93d7a825.jpg" class="miniaturas-img" alt="Miniatura 2">
+      <img src="https://images.tcdn.com.br/img/img_prod/947450/180_camisa_polo_masculina_new_essencial_2mt_bege_duna_1214_1_956356a4606fe9c69eb2eddc93d7a825.jpg" class="miniaturas-img" alt="Miniatura 3">
+      <img src="https://images.tcdn.com.br/img/img_prod/947450/180_camisa_polo_masculina_new_essencial_2mt_bege_duna_1214_1_956356a4606fe9c69eb2eddc93d7a825.jpg" class="miniaturas-img" alt="Miniatura 4">
+    </div>
+    <img src="https://images.tcdn.com.br/img/img_prod/947450/180_camisa_polo_masculina_new_essencial_2mt_bege_duna_1214_1_956356a4606fe9c69eb2eddc93d7a825.jpg" class="imagem-grande">
+    <div class="detalhes">
+      <div class="produto-titulo">Camiseta </div>
+      <div class="produto-preco">R$ 80,90</div>
+      <div class="produto-label">Cor</div>
+      <div class="cores">
+        <div class="cor vermelha"></div>
+        <div class="cor branca"></div>
+        <div class="cor preta"></div>
+        <div class="cor azul"></div>
+        <div class="cor bege"></div>
+      </div>
+      <div class="produto-label">Tamanho</div>
+      <div class="tamanhos">
+        <div class="tamanho-btn">PP</div>
+        <div class="tamanho-btn">P</div>
+        <div class="tamanho-btn">M</div>
+        <div class="tamanho-btn">G</div>
+        <div class="tamanho-btn">GG</div>
+      </div>
+      <div class="botoes">
+        <button class="btn" onclick="location.href='carrinho.html'">Adicionar ao carrinho</button>
+        <button class="btn" onclick="location.href='checkout.html'">Comprar</button>
       </div>
     </div>
-    <div class="banner-subtitle">CONHEÇA SOBRE A NOVA COLEÇÃO</div>
   </div>
-
-  <script>
-    const track = document.getElementById('carouselTrack');
-    const slidesCount = track.children.length;
-    let currentIndex = 0;
-
-    setInterval(() => {
-      currentIndex = (currentIndex + 1) % slidesCount;
-      const offset = -currentIndex * track.clientWidth / slidesCount;
-      track.style.transform = `translateX(${offset}px)`;
-    }, 2800);
-  </script>
+  </main>
   <footer>
     <div class="footer-container">
       <p>&copy; 2025 VesteSul. Todos os direitos reservados.</p>

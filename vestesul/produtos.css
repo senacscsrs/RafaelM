@@ -1,0 +1,54 @@
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 10px 10px;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2.3em;
+      font-weight: bold;
+      margin-bottom: 25px;
+    }
+    .produtos {
+      display: grid;
+       grid-template-columns: repeat(5, 1fr);
+      gap: 32px;
+    }
+    .produto {
+      border: 2px solid #222;
+      border-radius: 5px;
+      background: #fff;
+      text-align: center;
+      padding: 16px 8px 8px 8px;
+      box-sizing: border-box;
+    }
+    .produto img {
+      width: 130px;
+      height: 130px;
+      object-fit: cover;
+      margin-bottom: 8px;
+      border-radius: 4px;
+    }
+    .nome {
+      font-size: 1rem;
+      margin-bottom: 4px;
+      color: #222;
+    }
+    .preco {
+      font-size: 1.3em;
+      color: #000;
+      font-weight: bold;
+      margin-top: 6px;
+    }
+    @media (max-width: 600px) {
+      .container {
+        padding: 18px 0;
+      }
+      .produtos {
+        gap: 18px;
+      }
+      .produto img {
+        width: 90px;
+        height: 90px;
+      }
+    }
