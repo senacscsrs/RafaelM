@@ -1,0 +1,130 @@
+.checkout-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 30px;
+    }
+    .la {
+      font-weight: bold;
+      font-size: 1.3em;
+      display: block;
+      margin: 20px 0 8px 0;
+    }
+    .input {
+      width: 100%;
+      padding: 10px;
+      font-size: 1em;
+      border: 2px solid #000000;
+      border-radius: 15px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+    }
+    .payment-methods {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 8px;
+    }
+    .payment-btn {
+      background: #e7ddc2;
+      border: 2px solid #d3c49c;
+      color: #333;
+      font-size: 14px;
+      padding: 12px 22px;
+      width: 20%;
+      cursor: pointer;
+      border-radius: 5px;
+      min-width: 80px;
+      transition: box-shadow 0.15s;
+      font-family: inherit;
+    }
+    .payment-btn:active, .payment-btn:focus {
+      box-shadow: 0 0 0 2px #c8b472;
+    }
+    .cards {
+      margin: 8px 0 16px 0;
+      display: flex;
+      gap: 6px;
+      align-items: center;
+    }
+    .cards img {
+      width: 38px; height: 26px;
+      object-fit: contain;
+    }
+.summary {
+  display: flex;
+  gap: 12px;
+  margin: 28px 0 18px 0;
+}
+
+.summary-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  max-width: 250px;
+}
+
+.quantity {
+  font-size: 1.4em;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.summary-img {
+  border: 3px solid #000;
+  width: 118px;
+  height: 118px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  margin-bottom: 6px; 
+}
+
+.summary-img img {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+}
+
+.summary-price {
+  font-weight: bold;
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.summary-desc {
+  font-size: 0.9em;
+  line-height: 1.3;
+  color: #333;
+  top:650px;
+  position: absolute;
+  margin-left: 150px;
+}
+
+    .finalizar-btn {
+      background: #e7ddc2;
+      border: 2px solid #d3c49c;
+      width: 40%;
+      display: block;
+      padding: 17px;
+      font-size: 1.5em;
+      font-weight: bold;
+      border-radius: 6px;
+      margin: 20px auto 0 auto;
+      cursor: pointer;
+      transition: box-shadow 0.15s;
+      font-family: inherit;
+      text-align: center;
+    }
+    .finalizar-btn:focus, .finalizar-btn:active {
+      box-shadow: 0 0 0 2px #c8b472;
+    }
+    @media (max-width: 700px) {
+      .checkout-container { padding: 10px; }
+      .summary { flex-direction: column; }
+      .summary-img { margin: 0 0 8px 0; }
+    }

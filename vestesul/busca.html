@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VesteSul</title>
+  <link rel="stylesheet" href="inicial.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar">
+
+      <button type="button" onclick="location.href='inicial.html';" class="btn-imagem">
+        <img src="foto/logo.png" alt="logo da loja" />
+      </button>
+
+      <div class="nav-content">
+
+        <form class="form-busca" action="#" method="GET">
+          <input type="text" placeholder="Buscar..." name="q" />
+          <button type="submit" class="btn-busca">
+            <img src="https://cdn-icons-png.flaticon.com/512/622/622669.png" alt="Buscar" />
+          </button>
+          <button type="submit" class="btn-busca">
+            <img src="https://images.icon-icons.com/1415/PNG/512/ic-filter_97609.png" alt="filtro" />
+          </button>
+        </form>
+
+        <ul class="menu-principal">
+          <li><a class="linksp" href="produtos.html">Ofertas</a></li>
+          <li><a class="linksp" href="produtos.html">Novidades</a></li>
+          <li><a class="linksp" href="produtos.html">Masculino</a></li>
+          <li><a class="linksp" href="produtos.html">Feminino</a></li>
+        </ul>
+      </div>
+
+      <div class="login-cadastro">
+        <a class="login" href="login.html">Login</a>
+        <p class="ou">ou</p>
+        <a class="cadastros" href="cadastro.html">Cadastre-se</a>
+      </div>
+      <div class="menuh">
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="menu-icon" aria-label="Abrir menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </label>
+
+        <ul class="menu-hamburguer">
+          <li><a href="carrinho.html">Carrinho</a></li>
+          <li><a href="meuspedidos.html">Meus Pedidos</a></li>
+
+        </ul>
+      </div>
+    </nav>
+  </header>
+ <div class="search-container">
+        <div class="filter-group">
+            <h2 class="filter-label">Tipo</h2>
+            <div class="options-container">
+                <input type="radio" id="tipo-masculino" name="tipo" class="option-radio" value="masculino">
+                <label for="tipo-masculino" class="option-label">Masculino</label>
+
+                <input type="radio" id="tipo-feminino" name="tipo" class="option-radio" value="feminino">
+                <label for="tipo-feminino" class="option-label">Feminino</label>
+
+                <input type="radio" id="tipo-unisex" name="tipo" class="option-radio" value="unisex">
+                <label for="tipo-unisex" class="option-label">Unisex</label>
+
+                <input type="radio" id="tipo-infantil" name="tipo" class="option-radio" value="infantil">
+                <label for="tipo-infantil" class="option-label">Infantil</label>
+            </div>
+        </div>
+
+        <div class="filter-group">
+            <h2 class="filter-label">Cor</h2>
+            <div class="options-container">
+                <input type="radio" id="cor-branco" name="cor" class="option-radio" value="branco">
+                <label for="cor-branco" class="option-label">Branco</label>
+
+                <input type="radio" id="cor-preto" name="cor" class="option-radio" value="preto">
+                <label for="cor-preto" class="option-label">Preto</label>
+
+                <input type="radio" id="cor-azul" name="cor" class="option-radio" value="azul">
+                <label for="cor-azul" class="option-label">Azul</label>
+
+                <input type="radio" id="cor-vermelho" name="cor" class="option-radio" value="vermelho">
+                <label for="cor-vermelho" class="option-label">Vermelho</label>
+            </div>
+        </div>
+
+        <div class="filter-group">
+            <h2 class="filter-label">Tamanho</h2>
+            <div class="options-container">
+                <input type="radio" id="tamanho-p" name="tamanho" class="option-radio" value="p">
+                <label for="tamanho-p" class="option-label">P</label>
+
+                <input type="radio" id="tamanho-m" name="tamanho" class="option-radio" value="m">
+                <label for="tamanho-m" class="option-label">M</label>
+
+                <input type="radio" id="tamanho-g" name="tamanho" class="option-radio" value="g">
+                <label for="tamanho-g" class="option-label">G</label>
+
+                <input type="radio" id="tamanho-gg" name="tamanho" class="option-radio" value="gg">
+                <label for="tamanho-gg" class="option-label">GG</label>
+            </div>
+        </div>
+
+        <div class="filter-group">
+            <h2 class="filter-label">Categoria</h2>
+            <div class="options-container">
+                <input type="radio" id="categoria-camiseta" name="categoria" class="option-radio" value="camiseta">
+                <label for="categoria-camiseta" class="option-label">Camiseta</label>
+
+                <input type="radio" id="categoria-calca" name="categoria" class="option-radio" value="calca">
+                <label for="categoria-calca" class="option-label">Calça</label>
+
+                <input type="radio" id="categoria-bermuda" name="categoria" class="option-radio" value="bermuda">
+                <label for="categoria-bermuda" class="option-label">Bermuda</label>
+
+                <input type="radio" id="categoria-casaco" name="categoria" class="option-radio" value="casaco">
+                <label for="categoria-casaco" class="option-label">Casaco</label>
+            </div>
+        </div>
+
+        <div class="filter-group">
+            <h2 class="filter-label">Novidades</h2>
+            <div class="options-container">
+                <input type="radio" id="novidades-lancamento" name="novidades" class="option-radio" value="lancamento">
+                <label for="novidades-lancamento" class="option-label">Lançamento</label>
+
+                <input type="radio" id="novidades-promocao" name="novidades" class="option-radio" value="promocao">
+                <label for="novidades-promocao" class="option-label">Promoção</label>
+
+                <input type="radio" id="novidades-tendencias" name="novidades" class="option-radio" value="tendencias">
+                <label for="novidades-tendencias" class="option-label">Tendências</label>
+
+                <input type="radio" id="novidades-colecao" name="novidades" class="option-radio" value="colecao">
+                <label for="novidades-colecao" class="option-label">Coleção</label>
+            </div>
+        </div>
+    </div>
+  <footer>
+    <div class="footer-container">
+      <p>&copy; 2025 VesteSul. Todos os direitos reservados.</p>
+      <div class="footer-links">
+        <a class="afooter" href="suporte.html">Suporte</a>
+        <a class="afooter" href="institucional.html">Institucional</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

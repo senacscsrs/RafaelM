@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VesteSul</title>
+  <link rel="stylesheet" href="checkout.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+   <header>
+    <nav class="navbar">
+    
+      <button type="button" onclick="location.href='inicial.html';" class="btn-imagem">
+        <img src="foto/logo.png" alt="logo da loja" />
+      </button>
+      
+      <div class="nav-content">
+        <form class="form-busca" action="#" method="GET">
+          <input type="text" placeholder="Buscar..." name="q" />
+          <button type="submit" class="btn-busca">
+            <img src="https://cdn-icons-png.flaticon.com/512/622/622669.png" alt="Buscar" />
+          </button>
+        </form>
+
+        <ul class="menu-principal">
+          <li><a class="linksp" href="produtos.html">Ofertas</a></li>
+          <li><a class="linksp" href="produtos.html">Novidades</a></li>
+          <li><a class="linksp" href="produtos.html">Masculino</a></li>
+          <li><a class="linksp" href="produtos.html">Feminino</a></li>
+        </ul>
+      </div>
+     
+      <div class="login-cadastro">
+        <a class="login" href="login.html">Login</a>
+        <p class="ou">ou</p>
+        <a class="cadastros" href="cadastro.html">Cadastre-se</a>
+      </div>
+      <div class="menuh">
+      <input type="checkbox" id="menu-toggle" />
+      <label for="menu-toggle" class="menu-icon" aria-label="Abrir menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </label>
+
+      <ul class="menu-hamburguer">
+        <li><a href="carrinho.html">Carrinho</a></li>
+        <li><a href="meuspedidos.html">Meus Pedidos</a></li>
+        
+      </ul>
+      </div>
+    </nav>
+  </header>
+<div class="checkout-container">
+    <h1>Checkout</h1>
+    <form>
+      <label class="la"for="nome">Nome</label>
+      <input type="text" id="nome" name="nome" class="input">
+
+      <label class="la">Forma de pagamento</label>
+      <div class="payment-methods">
+        <button type="button" class="payment-btn">Cartão de crédito</button>
+        <button type="button" class="payment-btn">Boleto</button>
+        <button type="button" class="payment-btn">PIX</button>
+      </div>
+      <div class="cards">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png" alt="Visa">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png" alt="Mastercard">
+        <img src="data:image/png;base64,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" alt="Elo">
+        <img src="https://mms.businesswire.com/media/20220406006107/pt/662844/5/AXP_BlueBoxLogo_LARGEscale_RGB_DIGITAL.jpg?download=1" alt="Amex">
+      </div>
+
+      <label class="la" for="endereco">Endereço</label>
+      <input type="text" id="endereco" name="endereco" class="input">
+
+      <div class="summary">
+  <div class="summary-info">
+    <div class="quantity">1x Camiseta</div>   
+    <div class="summary-img">
+      <img src="https://images.tcdn.com.br/img/img_prod/947450/camiseta_strong_terracota_malha_pesada_1143_1_a613a6d4622e8cb028d76996a10f2306.jpg" alt="Camiseta Terra Cota">
+    </div>
+    <div class="summary-price">R$ 84,90</div>
+    
+  </div>
+  <div class="summary-desc">
+      Camiseta STRONG - TerraCota (Malha Pesada)<br>
+      - 100% algodão em malha 26.1 (mais pesada), com toque super macio.<br>
+      - Camiseta pré-lavada e pré-encolhida (zero encolhimento) levemente perfumada.<br>
+      - Gola careca em ribana canelada.<br>
+      - Modelagem é regular fit e levemente alongada, proporcionando caimento perfeito no corpo.<br>
+      - Visual minimalista, sem nenhuma estampa externa.
+    </div>
+</div>
+
+
+      <button type="submit" class="finalizar-btn">Finalizar pedido</button>
+    </form>
+  </div>
+ <footer >
+  <div class="footer-container">
+      <p>&copy; 2025 VesteSul. Todos os direitos reservados.</p>
+    <div class="footer-links">
+      <a class="afooter"href="suporte.html">Suporte</a>
+      <a class="afooter"href="institucional.html">Institucional</a>
+    </div>
+    </div>
+</footer>
+</body>
+
+</html>

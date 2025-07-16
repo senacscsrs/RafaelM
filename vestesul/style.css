@@ -35,45 +35,64 @@ header {
     width: 140px;
     height: auto;
 }
-
 .nav-content {
-    gap: 24px;
     flex: 2;
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 10px;
 }
 
 .form-busca {
     position: relative;
     width: 340px;
-    margin: 27px 18px 0 30px;
+    margin-top: 27px;
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    background-color: #fff;
+    padding-right: 5px;
+    box-sizing: border-box;
 }
 
 .form-busca input[type="text"] {
-    width: 100%;
+    flex-grow: 1;
     padding: 10px 5px 10px 12px;
     border-radius: 15px;
     border: none;
     outline: none;
     font-size: 16px;
+    background-color: transparent;
 }
 
 .btn-busca {
-    position: absolute;
-    right: 8px;
-    top: 50%;
-    transform: translateY(-50%);
     background: none;
     border: none;
     padding: 0;
     cursor: pointer;
+    margin-left: 5px;
 }
 
 .btn-busca img {
     width: 22px;
     height: 22px;
 }
+
+.btn-filtro {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    margin-left: 8px;
+    margin-right: 5px;
+}
+
+.btn-filtro img {
+    width: 28px;
+    height: 28px;
+}
+
+
 
 .menu-principal {
     display: flex;
