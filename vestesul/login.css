@@ -13,7 +13,7 @@ h2 {
   margin-top: 0px;
 }
 
-form {
+.login-form {
   display: flex;
   flex-direction: column;
   align-items: stretch;
