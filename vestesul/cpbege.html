@@ -17,12 +17,17 @@
         <img src="foto/logo.png" alt="logo da loja" />
       </button>
       <div class="nav-content">
-        <form class="form-busca" action="#" method="GET">
-          <input type="text" placeholder="Buscar..." name="q" />
-          <button type="submit" class="btn-busca">
+            <div class="search-filter-container">
+    <form class="form-busca" action="#" method="GET">
+        <input type="text" placeholder="Buscar..." name="q" />
+        <button type="submit" class="btn-busca">
             <img src="https://cdn-icons-png.flaticon.com/512/622/622669.png" alt="Buscar" />
-          </button>
-        </form>
+        </button>
+        <button type="button" onclick="location.href='busca.html'" class="btn-filtro">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFWybIUes5Ao1QIwS-Bv36LxRDBLq_WpnoDpOwrhtpN-Zl-i5hLYQL7yL9o-gHubWvXF0&usqp=CAU" alt="filtro" />
+        </button>
+    </form>
+</div>
         <ul class="menu-principal">
           <li><a class="linksp" href="produtos.html">Ofertas</a></li>
           <li><a class="linksp" href="produtos.html">Novidades</a></li>
