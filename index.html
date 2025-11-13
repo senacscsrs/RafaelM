@@ -1,32 +1,155 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>site do rafael</title>
+    <title>Portfólio | Rafael</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="icon" href="https://images.emojiterra.com/microsoft/fluent-emoji/15.1/1024px/1f3ce_color.png" type="image/png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </head>
+
 <body>
-    <div class="navbar">
-        <p id="senac">Ensino Médio <b>senac</b></p>
-        <a href= "index.html">Início</a>
-        <a href= "sobre.html">Sobre</a>
-        <a href= "atividades.html">Atividades</a>
-        <a href="contato.html">Contato</a>       
-         <a href="curriculo.html">Currículo</a> 
-        <a href="projetosp.html">Projetos pessoais</a>    </div>
-    <div class="content"> 
-        <h1>Bem-vindo à página inicial!</h1>
-        <p>Este site tem como objetivo reunir e apresentar as diversas atividades realizadas na escola. Aqui você encontrará informações sobre projetos, trabalhos e outras iniciativas que fazem parte da rotina escolar.</p>
-        <p>Meu foco é oferecer um espaço organizado para que colegas e professores possam acompanhar e conhecer melhor as ações que acontecem ao longo do ano letivo.</p>
-        <p>Através deste portal, busco valorizar o aprendizado que vai além da sala de aula.</p>
-    </div>
+    <header>
+        <a href="#home" class="logo">Rafael Marques</a>
+        <nav>
+            <a href="#home" class="active">Home</a>
+            <a href="#sobre">Sobre mim</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <!-- HOME -->
+    <section id="home">
+        <model-viewer id="car3d" src="3D/oracle_red_bull_f1_car_rb19_2023.glb  " alt="Carro de Fórmula 1 em 3D"
+            camera-controls camera-orbit="-45deg 70deg 5m" field-of-view="45deg" shadow-intensity="1"
+            camera-target="0m 0m 0m">
+        </model-viewer>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre">
+        <div class="sobre-box">
+            <h2>Sobre mim</h2>
+            <p>Olá! Meu nome é Rafael Ferreira Marques.<br> Sou estudante do Senac Santa Cruz do Sul e tenho 16 anos.
+                Estou aprendendo sobre HTML, CSS, JavaScript e Java.</p>
+            <div class="social-links">
+                <a href="https://github.com/rafamarques09" target="_blank">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub">
+                </a>
+                <a href="https://www.instagram.com/r.marquesz_/" target="_blank">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram">
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="projetos">
+        <h2>Projetos Pessoais</h2>
+        <div class="card-container">
+            <div class="card">
+                <img src="imagem/curriculo.png"
+                    alt="curriculo">
+
+                <div class="card-content">
+                    <h3>Currículo</h3>
+                    <p>Meu currículo feito em um arquivo HTML e CSS.</p>
+                    <a href="curriculo/curriculo.html" target="_blank" class="btn-site">Ver projeto</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="imagem/vestesul.png"
+                    alt="VesteSul">
+                <div class="card-content">
+                    <h3>VesteSul</h3>
+                    <p>Site feito com base em um wireframe do Figma.</p>
+                    <a href="vestesul/inicial.html" target="_blank" class="btn-site">Ver projeto</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="imagem/sitef1.png"
+                    alt="sitef1">
+                <div class="card-content">
+                    <h3>Site Fórmula 1</h3>
+                    <p>Site sobre Fórmula 1, que contém informções sobre circuitos, pilotos, equipes e calendário.</p>
+                    <a href="sitef1/paginaincial.html" target="_blank" class="btn-site">Ver projeto</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- CONTATO -->
+    <section id="contato">
+        <div class="contato-box">
+            <h2>Entre em contato</h2>
+            <p><strong>Email institucional:</strong> 04042811094@senacrs.edu.br</p>
+            <p><strong>Email:</strong> rafafermarques@gmail.com</p>
+            <div class="social-links">
+                <a href="https://github.com/rafamarques09" target="_blank">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub">
+                </a>
+                <a href="https://www.instagram.com/r.marquesz_/" target="_blank">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram">
+                </a>
+            </div>
+        </div>
+    </section>
+
     <footer>
-    <a href="https://www.instagram.com/r.marquesz_/" class="instagram-link" target="_blank">
-            <i class="fab fa-instagram"></i> Instagram
-    </a>    
-</footer>
+        <a href="https://github.com/rafamarques09" target="_blank">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub">
+        </a>
+        <a href="https://www.instagram.com/r.marquesz_/" target="_blank">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram">
+        </a>
+    </footer>
+
+    <script>
+        const sections = document.querySelectorAll("section");
+        const navLinks = document.querySelectorAll("nav a");
+
+        window.addEventListener("scroll", () => {
+            let current = "";
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                if (pageYOffset >= sectionTop) {
+                    current = section.getAttribute("id");
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove("active");
+                if (link.getAttribute("href") === `#${current}`) {
+                    link.classList.add("active");
+                }
+            });
+        });
+    </script>
+    <script type="module">
+        const viewer = document.querySelector('#car3d');
+
+        const defaultOrbit = '-45deg 70deg 5m';
+        let resetTimer;
+
+        viewer.addEventListener('camera-change', () => {
+            clearTimeout(resetTimer);
+            viewer.autoRotate = false;
+
+            resetTimer = setTimeout(() => {
+                smoothReturn();
+            }, 500);
+        });
+
+        function smoothReturn() {
+            viewer.cameraOrbit = defaultOrbit;
+            viewer.interpolateCameraOrbitToGoal(2000);
+            viewer.autoRotate = true;
+        }
+    </script>
 </body>
+
 </html>
