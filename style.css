@@ -203,13 +203,80 @@
    transform: scale(1.1);
  }
 
- @media (max-width: 768px) {
-   header {
-     flex-direction: column;
-     gap: 0.5rem;
-   }
+ /* --------- RESPONSIVIDADE --------- */
+@media (max-width: 1024px) {
+  header {
+    padding: 1rem 3rem;
+  }
+  .card {
+    width: 45%;
+  }
+}
 
-   section {
-     padding-top: 7rem;
-   }
- }
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+  }
+
+  nav {
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  section {
+    padding-top: 7rem;
+  }
+
+  #home model-viewer {
+    height: 50vh;
+  }
+
+  .card {
+    width: 80%;
+  }
+
+  #sobre .sobre-box,
+  .contato-box {
+    padding: 2rem;
+  }
+  .contato-box{
+    text-align: left;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 0.5rem 1rem;
+  }
+
+  nav a {
+    margin-left: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  #home model-viewer {
+    height: 40vh;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  p {
+    font-size: 0.85rem;
+  }
+}

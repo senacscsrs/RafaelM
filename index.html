@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio | Rafael</title>
+    <link rel="icon" href="imagem/icone.png" type="image/png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap">
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
@@ -12,7 +13,7 @@
 
 <body>
     <header>
-        <a href="#home" class="logo">Rafael Marques</a>
+        <a href="#home" class="logo">Portifólio | Rafael Marques</a>
         <nav>
             <a href="#home" class="active">Home</a>
             <a href="#sobre">Sobre mim</a>
@@ -129,27 +130,42 @@
             });
         });
     </script>
-    <script type="module">
-        const viewer = document.querySelector('#car3d');
+<script type="module">
+const viewer = document.querySelector('#car3d');
+let resetTimer;
 
-        const defaultOrbit = '-45deg 70deg 5m';
-        let resetTimer;
+// Posições do carro para diferentes telas
+const defaultOrbitDesktop = '-45deg 70deg 5m';
+const defaultOrbitTablet  = '-30deg 60deg 4m';
+const defaultOrbitMobile  = '0deg 70deg 3m';
 
-        viewer.addEventListener('camera-change', () => {
-            clearTimeout(resetTimer);
-            viewer.autoRotate = false;
+// Função para pegar posição correta
+function getDefaultOrbit() {
+  const width = window.innerWidth;
+  if (width <= 480) return defaultOrbitMobile;
+  if (width <= 768) return defaultOrbitTablet;
+  return defaultOrbitDesktop;
+}
 
-            resetTimer = setTimeout(() => {
-                smoothReturn();
-            }, 500);
-        });
+// Inicializa
+viewer.cameraOrbit = getDefaultOrbit();
+viewer.interpolationDuration = 1000; // duração da transição suave em ms
 
-        function smoothReturn() {
-            viewer.cameraOrbit = defaultOrbit;
-            viewer.interpolateCameraOrbitToGoal(2000);
-            viewer.autoRotate = true;
-        }
-    </script>
+// Atualiza ao redimensionar
+window.addEventListener('resize', () => {
+  viewer.cameraOrbit = getDefaultOrbit();
+});
+
+// Função para voltar a posição após interação
+viewer.addEventListener('camera-change', () => {
+  clearTimeout(resetTimer);
+  viewer.autoRotate = false;
+
+  resetTimer = setTimeout(() => {
+    viewer.cameraOrbit = getDefaultOrbit(); // volta para a posição correta
+  }, 1000); // volta após 1,5s
+});
+</script>
 </body>
 
 </html>
