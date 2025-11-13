@@ -1,0 +1,23 @@
+{
+	"folders": [
+		{
+			"name": "RafaelM",
+			"path": "."
+		},
+		{
+			"name": "sitef1",
+			"path": "../primeiroano2025-5/rafael/sitef1"
+		},
+		{
+			"name": "atividade2css",
+			"path": "../primeiroano2025-5/rafael/atividade2css"
+		},
+		{
+			"name": "atividade1css",
+			"path": "../primeiroano2025-5/rafael/atividade1css"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "RafaelM"
+	}
+}
