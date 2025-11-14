@@ -33,27 +33,36 @@
     <!-- SOBRE -->
     <section id="sobre">
         <div class="sobre-box">
-            <h2>Sobre mim</h2>
-            <p>Olá! Meu nome é Rafael Ferreira Marques.<br> Sou estudante do Senac Santa Cruz do Sul e tenho 16 anos.
-                Estou aprendendo sobre HTML, CSS, JavaScript e Java.</p>
-            <div class="social-links">
-                <a href="https://github.com/rafamarques09" target="_blank">
-                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub">
-                </a>
-                <a href="https://www.instagram.com/r.marquesz_/" target="_blank">
-                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram">
-                </a>
+            <div class="sobre-content">
+                <div class="sobre-text">
+                    <h2>Sobre mim</h2>
+                    <p>Olá! Meu nome é Rafael Ferreira Marques.<br>
+                        Sou estudante do Senac Santa Cruz do Sul e tenho 16 anos.<br>
+                        Estou aprendendo sobre HTML, CSS, JavaScript e Java.</p>
+                    <div class="social-links">
+                        <a href="https://github.com/rafamarques09" target="_blank">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub">
+                        </a>
+                        <a href="https://www.instagram.com/r.marquesz_/" target="_blank">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram">
+                        </a>
+                    </div>
+                </div>
+                <div class="sobre-image">
+                    <img id="foto" src="imagem/rafael01.png" alt="Foto do Rafael">
+                </div>
             </div>
         </div>
     </section>
 
 
+
+
     <section id="projetos">
-        <h2>Projetos Pessoais</h2>
+        <h2>Projetos</h2>
         <div class="card-container">
             <div class="card">
-                <img src="imagem/curriculo.png"
-                    alt="curriculo">
+                <img src="imagem/curriculo.png" alt="curriculo">
 
                 <div class="card-content">
                     <h3>Currículo</h3>
@@ -63,8 +72,7 @@
             </div>
 
             <div class="card">
-                <img src="imagem/vestesul.png"
-                    alt="VesteSul">
+                <img src="imagem/vestesul.png" alt="VesteSul">
                 <div class="card-content">
                     <h3>VesteSul</h3>
                     <p>Site feito com base em um wireframe do Figma.</p>
@@ -73,8 +81,7 @@
             </div>
 
             <div class="card">
-                <img src="imagem/sitef1.png"
-                    alt="sitef1">
+                <img src="imagem/sitef1.png" alt="sitef1">
                 <div class="card-content">
                     <h3>Site Fórmula 1</h3>
                     <p>Site sobre Fórmula 1, que contém informções sobre circuitos, pilotos, equipes e calendário.</p>
@@ -130,42 +137,55 @@
             });
         });
     </script>
-<script type="module">
-const viewer = document.querySelector('#car3d');
-let resetTimer;
+    <script type="module">
+        const viewer = document.querySelector('#car3d');
+        let resetTimer;
 
-// Posições do carro para diferentes telas
-const defaultOrbitDesktop = '-45deg 70deg 5m';
-const defaultOrbitTablet  = '-30deg 60deg 4m';
-const defaultOrbitMobile  = '0deg 70deg 3m';
+        // Posições do carro para diferentes telas
+        const defaultOrbitDesktop = '-45deg 70deg 5m';
+        const defaultOrbitTablet = '-30deg 60deg 4m';
+        const defaultOrbitMobile = '0deg 70deg 3m';
 
-// Função para pegar posição correta
-function getDefaultOrbit() {
-  const width = window.innerWidth;
-  if (width <= 480) return defaultOrbitMobile;
-  if (width <= 768) return defaultOrbitTablet;
-  return defaultOrbitDesktop;
-}
+        // Função para pegar posição correta
+        function getDefaultOrbit() {
+            const width = window.innerWidth;
+            if (width <= 480) return defaultOrbitMobile;
+            if (width <= 768) return defaultOrbitTablet;
+            return defaultOrbitDesktop;
+        }
 
-// Inicializa
-viewer.cameraOrbit = getDefaultOrbit();
-viewer.interpolationDuration = 1000; // duração da transição suave em ms
+        // Inicializa
+        viewer.cameraOrbit = getDefaultOrbit();
+        viewer.interpolationDuration = 1000; // duração da transição suave em ms
 
-// Atualiza ao redimensionar
-window.addEventListener('resize', () => {
-  viewer.cameraOrbit = getDefaultOrbit();
-});
+        // Atualiza ao redimensionar
+        window.addEventListener('resize', () => {
+            viewer.cameraOrbit = getDefaultOrbit();
+        });
 
-// Função para voltar a posição após interação
-viewer.addEventListener('camera-change', () => {
-  clearTimeout(resetTimer);
-  viewer.autoRotate = false;
+        // Função para voltar a posição após interação
+        viewer.addEventListener('camera-change', () => {
+            clearTimeout(resetTimer);
+            viewer.autoRotate = false;
 
-  resetTimer = setTimeout(() => {
-    viewer.cameraOrbit = getDefaultOrbit(); // volta para a posição correta
-  }, 1000); // volta após 1,5s
-});
-</script>
+            resetTimer = setTimeout(() => {
+                viewer.cameraOrbit = getDefaultOrbit(); // volta para a posição correta
+            }, 1000); // volta após 1,5s
+        });
+    </script>
+    <script>
+        const foto = document.getElementById('foto');
+
+        // Array com as imagens que deseja alternar
+        const imagens = ['imagem/rafael01.png', 'imagem/rafael00.png', 'imagem/rafael02.jpg','imagem/rafael03.jpg','imagem/rafael04.jpg','imagem/rafael05.jpeg'];
+        let indice = 0;
+
+        foto.addEventListener('click', () => {
+            // Alterna para a próxima imagem
+            indice = (indice + 1) % imagens.length;
+            foto.src = imagens[indice];
+        });
+    </script>
 </body>
 
 </html>

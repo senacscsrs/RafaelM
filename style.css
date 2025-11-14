@@ -83,15 +83,44 @@
  }
 
  /* --------- SOBRE --------- */
- #sobre .sobre-box {
-   background-color: #151515;
-   padding: 4rem;
-   border-radius: 15px;
-   color: #eaeaea;
-   text-align: justify;
-   line-height: 1.7;
-   margin-top: 1rem;
- }
+#sobre .sobre-box {
+    background-color: #151515;
+    padding: 2rem;
+    border-radius: 15px;
+    color: #eaeaea;
+    margin-top: 1rem;
+}
+
+.sobre-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.sobre-text {
+    flex: 1 1 300px;
+    text-align: justify;
+    line-height: 1.7;
+}
+
+.sobre-image {
+    flex: 0 0 150px;
+    cursor: pointer; /* Indica que é clicável */
+}
+
+.sobre-image img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #7a7a7a;
+    transition: transform 0.3s;
+}
+
+.sobre-image img:hover {
+    transform: scale(1.05); /* Pequeno efeito ao passar o mouse */
+}
 
  /* --------- ATIVIDADES --------- */
  .card-container {
@@ -107,7 +136,7 @@
    width: 320px;
    overflow: hidden;
    transition: 0.3s;
-   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+   box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
  }
  .card:hover {
    transform: scale(1.05);  
