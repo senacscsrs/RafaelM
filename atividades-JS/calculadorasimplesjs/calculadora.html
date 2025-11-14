@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://images.icon-icons.com/562/PNG/512/calculator_icon-icons.com_54044.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+
+<body>
+    <div class="conteudo">
+        <h1>Calculadora Simples com JS</h1>
+        <input type="number" placeholder="Digite o primeiro número" id="n1">
+        <input type="number" placeholder="Digite o segundo número" id="n2">
+        <input type="text" placeholder="Digite a operação(+, -, *, /)" id="operacao">
+        <button id="submit">CALCULAR</button>
+        <div class="resultado">
+            <p>Resultado:</p>
+            <p id="resultado"></p>
+        </div>
+    </div>
+    <script>
+        let n1 = document.getElementById("n1");
+        let n2 = document.getElementById("n2");
+        let operacao = document.getElementById("operacao");
+        let resultado = document.getElementById("resultado");
+        document.getElementById("submit").addEventListener('click', calcular)
+        function calcular() {
+            let num1 = Number(n1.value);
+            let num2 = Number(n2.value);
+            let op = operacao.value;
+            if (op === "+") {
+                resultado.innerHTML = num1 + num2;
+            } else if (op === "-") {
+                resultado.innerHTML = num1 - num2;
+            } else if (op === "*") {
+                resultado.innerHTML = num1 * num2;
+            } else if (op === "/") {
+                resultado.innerHTML = num1 / num2;
+            } else {
+                resultado.innerHTML = "Operação inválida!";
+            }
+        }
+
+    </script>
+</body>
+
+</html>

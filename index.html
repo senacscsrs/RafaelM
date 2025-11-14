@@ -88,6 +88,16 @@
                     <a href="sitef1/paginaincial.html" target="_blank" class="btn-site">Ver projeto</a>
                 </div>
             </div>
+
+            <div class="card">
+                <img src="imagem/calculadorasimples.png" alt="curriculo">
+
+                <div class="card-content">
+                    <h3>Calculadora Simples com JS</h3>
+                    <p>Uma calcaladora simples feita em HTML, CSS e JS.</p>
+                    <a href="atividades-JS/calculadorasimplesjs/calculadora.html" target="_blank" class="btn-site">Ver projeto</a>
+                </div>
+            </div>
         </div>
     </section>
     <!-- CONTATO -->
@@ -143,14 +153,14 @@
 
         // Posições do carro para diferentes telas
         const defaultOrbitDesktop = '-45deg 70deg 5m';
-        const defaultOrbitTablet = '-30deg 60deg 4m';
+        const defaultOrbitTablet = '0deg 70deg 3m';
         const defaultOrbitMobile = '0deg 70deg 3m';
 
         // Função para pegar posição correta
         function getDefaultOrbit() {
             const width = window.innerWidth;
             if (width <= 480) return defaultOrbitMobile;
-            if (width <= 768) return defaultOrbitTablet;
+            if (width <= 1080) return defaultOrbitTablet;
             return defaultOrbitDesktop;
         }
 
