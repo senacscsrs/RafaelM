@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://images.icon-icons.com/562/PNG/512/calculator_icon-icons.com_54044.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
 </head>
@@ -15,44 +16,74 @@
             <p id="visor"></p>
         </div>
         <div class="grid-btns">
-            <button class="numero" id="n1">1</button>
-            <button class="numero" id="n2">2</button>
-            <button class="numero" id="n3">3</button>
-            <button class="operacao"id="divisao">/</button>
-            <button class="numero" id="n4">4</button>
-            <button class="numero" id="n5">5</button>
-            <button class="numero" id="n6">6</button>
-            <button class="operacao" id="multiplicacao">X</button>
-            <button class="numero" id="n7">7</button>
-            <button class="numero" id="n8">8</button>
-            <button class="numero" id="n9">9</button>
-            <button class="operacao" id="subtracao">-</button>
-            <button class="numero" id="n0">0</button>
-            <button id="vigula">,</button>
+            <button class="numero" onclick="digitar('1')" id="n1">1</button>
+            <button class="numero" onclick="digitar('2')" id="n2">2</button>
+            <button class="numero" onclick="digitar('3')" id="n3">3</button>
+            <button class="operacao" onclick="operacao('/')" id="divisao">/</button>
+            <button class="numero" onclick="digitar('4')" id="n4">4</button>
+            <button class="numero" onclick="digitar('5')" id="n5">5</button>
+            <button class="numero" onclick="digitar('6')" id="n6">6</button>
+            <button class="operacao" onclick="operacao('*')" id="multiplicacao">X</button>
+            <button class="numero" onclick="digitar('7')" id="n7">7</button>
+            <button class="numero" onclick="digitar('8')" id="n8">8</button>
+            <button class="numero" onclick="digitar('9')" id="n9">9</button>
+            <button class="operacao" onclick="operacao('-')" id="subtracao">-</button>
+            <button class="numero" onclick="digitar('0')" id="n0">0</button>
+            <button onclick="limparVisor()">CE</button>
             <button id="igual">=</button>
-            <button class="operacao" id="adicao">+</button>
-    
+            <button class="operacao" onclick="operacao('+')" id="adicao">+</button>
+
         </div>
     </div>
     <script>
-        let primeiroNum = document.getElementsByClassName('numero');
-        let segundoNum = document.getElementsByClassName('numero');
-        let operacao = document.getElementsByClassName('operacao');
-        let resultado;
-        function soma(){
-            console.log(resultado =primeiroNum +segundoNum);
+        let n1 = "";
+        let n2 = "";
+        let op = "";
+        let visor = document.getElementById("visor");
+
+        document.getElementById('igual').addEventListener('click', calcular);
+        function digitar(valor) {
+            if (op === "") {
+                n1 += valor;
+                visor.innerHTML = n1;
+            } else {
+                n2 += valor;
+                visor.innerHTML = n2;
+            }
         }
-        function subtrai(){
-            resultado =primeiroNum-segundoNum;
-        }
-        function multiplica(){
-            resultado =primeiroNum*segundoNum;
-        }
-        function divide(){
-            resultado =primeiroNum/segundoNum;
-        }
-        if(operacao == "+"){
-            soma();
+
+        function operacao(simbolo) {
+    op = simbolo;
+}
+
+      function calcular() {
+
+    if (n1 === "" || n2 === "") {
+        visor.innerHTML = "Erro";
+        return;
+    }
+
+    let num1 = Number(n1);
+    let num2 = Number(n2);
+
+    let resultado = 0;
+
+    if (op === "*") resultado = num1 * num2;
+    if (op === "+") resultado = num1 + num2;
+    if (op === "-") resultado = num1 - num2;
+    if (op === "/") resultado = num1 / num2;
+
+    visor.innerHTML = resultado;
+
+    n1 = resultado.toString();
+    n2 = "";
+    op = "";
+}
+        function limparVisor() {
+            n1 = "";
+            n2 = "";
+            op = "";
+            visor.innerHTML = "";
         }
     </script>
 </body>
