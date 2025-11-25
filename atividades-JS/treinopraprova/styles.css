@@ -1,0 +1,51 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.intro{
+    margin: 0 auto;
+    width: 60%;
+    text-align: center;
+    background-color: rgb(139, 139, 139);
+    border-radius: 8px;
+    padding: 10px;
+}
+.calculadora{
+    margin: 0 auto;
+    width: 60%;
+    text-align: center;
+    background-color: rgb(139, 139, 139);
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 20px;
+}
+.notas{
+    border: none;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px;
+}
+#submit{
+    border: none;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px;
+    background-color: rgb(25, 97, 180);
+}
+.trocar-cor-fundo{
+    display: flex;
+    margin: 0 auto;
+    width: 60%;
+    text-align: center;
+    background-color: rgb(139, 139, 139);
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 20px;
+}
+#btnTrocaCor{
+    display: block;
+    margin: 0 auto;
+    border: none;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: rgb(25, 97, 180);
+}
